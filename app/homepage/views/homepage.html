@@ -1,21 +1,23 @@
-<div style="margin-left: 35%;" ng-controller="homepageController" ng-init="populateAllPlanets()">
+<div  class="home-pg-main-div" ng-controller="homepageController" ng-init="populateAllPlanets()">
   <div>	
   	<h2>Welcome {{user}}</h2>
   </div>
   <div>
-  	<div style="margin-left: 20px; margin-top: 25px; margin-bottom: 25px;">
+  	<div class="home-pg-search-div">
   		<input ng-model="query" placeholder="Search planet by name .." ng-change="queryChanged()" ng-disabled="disableSearch"/>
-      <span>Search Count {{queryCounter}}</span>
   	</div>
-    <div style="margin-left: 75px; margin-bottom: 20px;">
+    <div class="home-pg-count-div">
+      <span>Search Count {{queryCounter}}</span>
+    </div>  
+    <div class= "home-pg-pagination-div">
       <button ng-click="prevPage()" ng-disabled="isPreviousDisabled()">Previous</button>
       <span>Page {{currentPageNumber}}/{{totalPages}}</span>
       <button ng-click="nextPage()" ng-disabled="isNextDisabled()">Next</button>
     </div>
-    <div ng-if="loadingData == false" style="margin-left: -75px;">
+    <div ng-if="loadingData == false" style="margin-left: -100px;">
       <planets planets={{planets}}></planets>	          
     </div>
-    <div style="margin-top: 150px" ng-if="loadingData == true" class="loader">
+    <div class="home-pg-planets-div loader" ng-if="loadingData == true">
        
     </div>      
   </div>	

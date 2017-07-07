@@ -1,5 +1,5 @@
 
-angular.module('homePage').controller('homepageController', ['$scope','$state', '$interval', 'userService', 'homepageService', function($scope, $state, $interval, userService, homepageService){
+angular.module('homePage').controller('homepageController', ['$scope', '$interval', 'userService', 'homepageService', function($scope, $interval, userService, homepageService){
 	
 	  // var self = this;
 	  $scope.user = userService.user;
@@ -11,13 +11,7 @@ angular.module('homePage').controller('homepageController', ['$scope','$state', 
 	  $scope.totalPages = 0;	  
 	  $scope.queryCounter = 0;
 	  $scope.loadingData = true;
-	  
-
-	  $scope.logout = function() {
-	  	userService.logout();
-	  	$state.go('login');
-	  }
-
+	  	  
 	  $scope.populateAllPlanets = function() {	  		
 	  		populateData();
 	  };

@@ -13,8 +13,9 @@ angular.module('loginPage').controller('loginController', ['$rootScope','$scope'
         		$scope.password = '';
         		$state.go('login');           		
         		$scope.error = "Incorrect username/password !";
-
+                
         	}  else {
+                $rootScope.showLogout = true;
            		$state.go('home');
         	}
        
@@ -23,8 +24,10 @@ angular.module('loginPage').controller('loginController', ['$rootScope','$scope'
         
     };
 
-    $rootScope.$on('logout', function() {
+    $rootScope.$on('logout', function() {   
+        $rootScope.showLogout = false;     
         userService.logout();
+
     })
      
 	
