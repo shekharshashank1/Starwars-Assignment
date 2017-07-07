@@ -1,0 +1,35 @@
+<ul>
+  <li class="rounded" ng-repeat="item in planets | searchFor:query">
+    <div class="panel panel-default" ng-style="getPanelBorderWidth($index)">
+        <div class="panel-body">
+          <table style="margin-bottom: 5px;">
+            <tr>
+              <td>Name</td>
+              <td>{{item.name}}</td>
+            </tr>
+            <tr>
+              <td>Population</td>
+              <td>{{item.population}}</td>
+            </tr>  
+            <tr ng-if="item.showMore">
+              <td>Diameter</td>
+              <td>{{item.diameter}}</td>
+              </tr>  
+              <tr ng-if="item.showMore">
+                <td>Climate</td>
+                <td>{{item.climate}}</td>
+              </tr>  
+              <tr ng-if="item.showMore">
+                <td>Terrain</td>
+                  <td>{{item.terrain}}</td>
+              </tr>  
+              <tr ng-if="item.showMore">
+                <td>Created</td>
+                <td>{{item.created}}</td>
+              </tr>                    
+            </table> 
+              <a href ng-click="showMoreSubmit($index)">{{item.showMore ? 'Show less' : 'Show more'}}</a>                 
+          </div>
+    </div>   
+  </li>             
+</ul>

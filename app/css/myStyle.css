@@ -1,0 +1,80 @@
+body {
+	background: linear-gradient(white, grey);
+}
+
+h1 {
+	color: blue;
+}
+
+p {
+	color: red;
+    margin-left: 5px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    /*border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 8px !important;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.fieldValid {
+    border: 2px solid #00ff00;
+}
+
+.fieldInvalid {
+    border: 2px solid #ff0000;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+}
+
+.panel {
+    width: 500px;
+    /*border-color: orange !important;*/
+    border-width: 5px;
+}
+
+input {
+    padding: 5px;
+    width: 300;
+    border: 1p;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

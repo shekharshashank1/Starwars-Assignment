@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<title>StarWars Search</title>
+	
+	<body ng-app="starWarsApp">
+		<div ng-controller="mainCtrl">
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand">StarWars Search</a>
+		    </div>
+		    
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="#" ng-click="logout()"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		</div>
+		<div ui-view></div>
+		
+
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> 
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>        
+		<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>     
+	      
+	     <script type="text/javascript" src="app.js"></script> 
+	     <script type="text/javascript" src="controllers/maincontroller.js"></script> 
+	     <script type="text/javascript" src="config/routes.js"></script>     
+	     <script type="text/javascript" src="login/login-module.js"></script> 
+	     <script type="text/javascript" src="login/controllers/logincontroller.js"></script> 
+	     <script type="text/javascript" src="login/services/userauthservice.js"></script>     
+	     
+	     <script type="text/javascript" src="homepage/homepage-module.js"></script>    
+	     <script type="text/javascript" src="filters/search-filter.js"></script>      
+	     <script type="text/javascript" src="homepage/controller/homepagecontroller.js"></script> 
+	     <script type="text/javascript" src="homepage/services/homepageservice.js"></script> 
+	     
+	     
+
+
+	</body>	
+</html>
